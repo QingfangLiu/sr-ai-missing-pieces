@@ -8,9 +8,9 @@ Illustrates the paragraph's central contrast:
       construct being graded.
 
 Each of the 3 columns is a real example drawn from a published/registered
-trial (see REFERENCES at the bottom, and the numbered superscripts in the
-figure). Edit COLUMNS below to change wording/examples; edit REFERENCES to
-keep citation numbers in sync.
+trial. The figure itself carries no citation numbers by design — citations
+belong in the figure caption/legend text, tracked separately. Edit COLUMNS
+below to change wording/examples.
 
 Output: outcome_mapping_figure.pdf (vector, edit-safe) in this folder.
 """
@@ -37,89 +37,68 @@ GRAY = "#6B6B6B"
 BOX_FACE = "#F4F4F4"
 BOX_EDGE = "#9A9A9A"
 
-FIG_W, FIG_H = 10.2, 5.6
+FIG_W, FIG_H = 10.2, 5.48
 
 COLUMNS = [
     {
-        "title": "Cardiovascular\nintervention trials",
-        "construct": "Major adverse\ncardiovascular events",
+        "title": "Knee osteoarthritis\ntrials",
+        "construct": "Pain",
         "merge_labels": [
-            "“3-point MACE” [1]",
-            "“Composite of CV death,\nMI, or stroke” [2]",
+            "“WOMAC pain\nsubscale”",
+            "“KOOS pain\nsubscale”",
+            "“VAS for\npain”",
         ],
         "merge_heading": "Different wording → same construct",
         "sep_labels": [
-            "“All-cause mortality,\n30 days” [3]",
-            "“All-cause mortality,\n1 year” [4]",
+            "“WOMAC\nstiffness\nsubscale”",
+            "“WOMAC\nphysical\nfunction\nsubscale”",
+            "“WOMAC\ntotal\nscore”",
         ],
         "sep_heading": "Similar wording → different constructs",
-        "sep_note": "different follow-up windows",
+        "sep_note": "same instrument, different construct",
     },
     {
-        "title": "Glycemic control\ntrials",
-        "construct": "HbA1c change\nfrom baseline",
+        "title": "Depression trials",
+        "construct": "Depressive symptoms",
         "merge_labels": [
-            "“Reduction in HbA1c\nlevels” [5]",
-            "“Change in glycosylated\nhemoglobin (HbA1c)” [6]",
+            "“HAM-D · PHQ-9 · GDS · HSCL-20 ·\nMADRS · BDI-FS · CES-D”",
         ],
         "merge_heading": "Different wording → same construct",
         "sep_labels": [
-            "“Fasting blood\nglucose” [7]",
-            "“Postprandial blood\nglucose (AUC)” [8]",
+            "“Depressive symptom\nseverity (SMD)”",
+            "“Disease remission\n(RR)”",
         ],
         "sep_heading": "Similar wording → different constructs",
-        "sep_note": "different measurement timing",
+        "sep_note": "continuous severity ≠ binary remission",
     },
     {
         "title": "Treatment-related\nharm outcomes",
         "construct": "Grade ≥3 treatment-\nrelated adverse events",
         "merge_labels": [
-            "“Grade 3 or higher\ntreatment-related AEs” [9]",
-            "“AEs of grade 3–5,\nrelated to treatment” [10]",
+            "“Grade 3 or higher\ntreatment-related AEs”",
+            "“AEs of grade 3–5,\nrelated to treatment”",
         ],
         "merge_heading": "Different wording → same construct",
         "sep_labels": [
-            "“Serious adverse\nevents (SAEs)” [11]",
-            "“Grade ≥3 adverse\nevents, all-cause” [12]",
+            "“Serious adverse\nevents (SAEs)”",
+            "“Grade ≥3 adverse\nevents, all-cause”",
         ],
         "sep_heading": "Similar wording → different constructs",
         "sep_note": "seriousness ≠ severity grade",
     },
 ]
 
-REFERENCES = [
-    "1,2. Zinman B, et al. Empagliflozin, Cardiovascular Outcomes, and Mortality in Type 2 Diabetes "
-    "(EMPA-REG OUTCOME). N Engl J Med 2015. pubmed.ncbi.nlm.nih.gov/26378978  |  "
-    "Cardiovascular Inflammation Reduction Trial (CIRT). ClinicalTrials.gov NCT01594333.",
-    "3,4. ACURATE neo2 IDE trial. ClinicalTrials.gov NCT03735667.  |  Frailty in Elderly Patients "
-    "Receiving Cardiac Interventional Procedures. ClinicalTrials.gov NCT02386124.",
-    "5,6. Impact of a digital application on HbA1c levels in people with diabetes: a randomized "
-    "controlled trial. PMC12257309.  |  Comparison of NN1250 With Insulin Glargine in Type 1 "
-    "Diabetes. ClinicalTrials.gov NCT01079234.",
-    "7,8. Determining the optimal fasting glucose target for patients with type 2 diabetes "
-    "(FPG GOAL trial). PubMed 30938035.  |  Improvements to postprandial glucose control in "
-    "subjects with type 2 diabetes: a randomized placebo-controlled trial of a probiotic "
-    "formulation. PubMed 32675291.",
-    "9,10. Schmid P, et al. Pembrolizumab for Early Triple-Negative Breast Cancer (KEYNOTE-522). "
-    "N Engl J Med 2020. doi:10.1056/NEJMoa1910549  |  Eggermont AMM, et al. Adjuvant Pembrolizumab "
-    "versus Placebo in Resected Stage III Melanoma. N Engl J Med 2018. doi:10.1056/NEJMoa1802357",
-    "11,12. Phase 1 Study of SGI-110 in Patients With Acute Myeloid Leukemia. ClinicalTrials.gov "
-    "NCT02293993.  |  Gandhi L, et al. Pembrolizumab plus Chemotherapy in Metastatic Non-Small-Cell "
-    "Lung Cancer (KEYNOTE-189). N Engl J Med 2018. doi:10.1056/NEJMoa1801005",
-]
-
-
-def rounded_box(ax, x, y, w, h, text, face, edge, fontsize=8.2, fontweight="normal",
+def rounded_box(ax, x, y, w, h, text, face, edge, fontsize=10.5, fontweight="bold",
                  textcolor=INK, zorder=3):
     box = FancyBboxPatch(
         (x - w / 2, y - h / 2), w, h,
         boxstyle="round,pad=0.010,rounding_size=0.018",
-        facecolor=face, edgecolor=edge, linewidth=1.1, zorder=zorder,
+        facecolor=face, edgecolor=edge, linewidth=1.7, zorder=zorder,
     )
     ax.add_patch(box)
     ax.text(x, y, text, ha="center", va="center", fontsize=fontsize,
              fontweight=fontweight, color=textcolor, zorder=zorder + 1,
-             linespacing=1.35)
+             linespacing=1.3)
     return box
 
 
@@ -127,8 +106,8 @@ def converge_arrow(ax, x0, y0, x1, y1, color):
     arrow = FancyArrowPatch(
         (x0, y0), (x1, y1),
         connectionstyle="arc3,rad=0.0",
-        arrowstyle="-|>", mutation_scale=11,
-        linewidth=1.4, color=color, zorder=2, shrinkA=2, shrinkB=4,
+        arrowstyle="-|>", mutation_scale=15,
+        linewidth=2.0, color=color, zorder=2, shrinkA=2, shrinkB=4,
     )
     ax.add_patch(arrow)
 
@@ -139,83 +118,85 @@ def draw_column(ax, col):
     ax.axis("off")
 
     # Column title
-    ax.text(0.5, 0.965, col["title"], ha="center", va="top",
-             fontsize=10.5, fontweight="bold", color=INK, linespacing=1.3)
+    ax.text(0.5, 0.975, col["title"], ha="center", va="top",
+             fontsize=14.5, fontweight="bold", color=INK, linespacing=1.25)
 
-    # --- Merge block -------------------------------------------------
-    ax.text(0.5, 0.775, col["merge_heading"], ha="center", va="center",
-             fontsize=7.6, style="italic", color=GRAY)
+    # --- Merge block (supports 2 or 3 converging labels) --------------
+    ax.text(0.5, 0.79, col["merge_heading"], ha="center", va="center",
+             fontsize=11, style="italic", fontweight="bold", color=GRAY)
 
-    lx, rx = 0.24, 0.76
-    top_y = 0.655
-    rounded_box(ax, lx, top_y, 0.42, 0.155, col["merge_labels"][0],
-                BOX_FACE, BOX_EDGE)
-    rounded_box(ax, rx, top_y, 0.42, 0.155, col["merge_labels"][1],
-                BOX_FACE, BOX_EDGE)
+    n = len(col["merge_labels"])
+    span_l, span_r = 0.02, 0.98
+    xs = [span_l + (span_r - span_l) * (i + 0.5) / n for i in range(n)]
+    box_w = (span_r - span_l) / n - 0.015
+    box_fs = 9.8 if n <= 2 else 9.4
+    top_y = 0.66
+    for x, label in zip(xs, col["merge_labels"]):
+        rounded_box(ax, x, top_y, box_w, 0.185, label, BOX_FACE, BOX_EDGE,
+                    fontsize=box_fs)
 
-    construct_y = 0.435
-    rounded_box(ax, 0.5, construct_y, 0.86, 0.145, col["construct"],
-                "#DCEBF7", BLUE, fontsize=9.0, fontweight="bold",
+    construct_y = 0.42
+    rounded_box(ax, 0.5, construct_y, 0.9, 0.165, col["construct"],
+                "#DCEBF7", BLUE, fontsize=14.5, fontweight="bold",
                 textcolor="#003A5C", zorder=3)
 
-    converge_arrow(ax, lx, top_y - 0.078, 0.5 - 0.10, construct_y + 0.075, BLUE)
-    converge_arrow(ax, rx, top_y - 0.078, 0.5 + 0.10, construct_y + 0.075, BLUE)
+    for i, x in enumerate(xs):
+        target_x = 0.5 + (i - (n - 1) / 2) * 0.12
+        converge_arrow(ax, x, top_y - 0.095, target_x, construct_y + 0.085, BLUE)
 
     # divider
-    ax.plot([0.06, 0.94], [0.315, 0.315], color="#D9D9D9", linewidth=1.0, zorder=1)
+    ax.plot([0.04, 0.96], [0.29, 0.29], color="#D9D9D9", linewidth=1.4, zorder=1)
 
     # --- Non-merge block ----------------------------------------------
-    ax.text(0.5, 0.265, col["sep_heading"], ha="center", va="center",
-             fontsize=7.6, style="italic", color=GRAY)
+    ax.text(0.5, 0.245, col["sep_heading"], ha="center", va="center",
+             fontsize=11, style="italic", fontweight="bold", color=GRAY)
 
-    sep_y = 0.145
-    rounded_box(ax, lx, sep_y, 0.42, 0.155, col["sep_labels"][0],
-                "#FCEFD8", "#B87E17")
-    rounded_box(ax, rx, sep_y, 0.42, 0.155, col["sep_labels"][1],
-                "#FCEFD8", "#B87E17")
+    sep_labels = col["sep_labels"]
+    n_sep = len(sep_labels)
+    sep_span_l, sep_span_r = 0.02, 0.98
+    sep_gap = 0.025 if n_sep <= 2 else 0.055
+    sep_box_w = ((sep_span_r - sep_span_l) - sep_gap * (n_sep - 1)) / n_sep
+    sep_xs = [sep_span_l + sep_box_w / 2 + i * (sep_box_w + sep_gap)
+              for i in range(n_sep)]
+    sep_box_fs = 9.8 if n_sep <= 2 else 8.3
+    sep_box_h = 0.185 if n_sep <= 2 else 0.22
+    sep_y = 0.115 if n_sep <= 2 else 0.10
+    for x, label in zip(sep_xs, sep_labels):
+        rounded_box(ax, x, sep_y, sep_box_w, sep_box_h, label,
+                    "#FCEFD8", "#B87E17", fontsize=sep_box_fs)
 
-    # blocked-merge glyph between the two boxes (drawn, not a text glyph,
-    # so it survives PDF font subsetting for journal submission)
-    ax.plot([0.5], [sep_y], marker="x", markersize=9, markeredgewidth=2.4,
-             color=ORANGE, zorder=4, linestyle="none")
+    # blocked-merge glyph between each adjacent pair (drawn, not a text
+    # glyph, so it survives PDF font subsetting for journal submission)
+    for x0, x1 in zip(sep_xs[:-1], sep_xs[1:]):
+        ax.plot([(x0 + x1) / 2], [sep_y], marker="x", markersize=13,
+                 markeredgewidth=3.2, color=ORANGE, zorder=4, linestyle="none")
 
-    ax.text(0.5, sep_y - 0.115, col["sep_note"], ha="center", va="center",
-             fontsize=7.4, style="italic", color="#8A5A0D")
+    ax.text(0.5, sep_y - 0.135, col["sep_note"], ha="center", va="center",
+             fontsize=10.5, style="italic", fontweight="bold", color="#8A5A0D")
 
 
 def main():
     fig, axes = plt.subplots(1, 3, figsize=(FIG_W, FIG_H))
-    fig.subplots_adjust(left=0.02, right=0.98, top=0.90, bottom=0.16, wspace=0.06)
+    fig.subplots_adjust(left=0.02, right=0.98, top=0.99, bottom=0.15, wspace=0.05)
 
     for ax, col in zip(axes, COLUMNS):
         draw_column(ax, col)
 
-    fig.text(0.5, 0.975,
-              "From reported outcome labels to synthesis-ready outcome constructs",
-              ha="center", va="top", fontsize=12.5, fontweight="bold", color=INK)
-
     # Legend for the two mechanisms
-    legend_y = 0.055
-    ax0 = axes[0]
-    fig.text(0.30, legend_y, "→", color=BLUE, fontsize=13, fontweight="bold",
+    legend_y = 0.045
+    fig.text(0.28, legend_y, "→", color=BLUE, fontsize=17, fontweight="bold",
              ha="center", va="center")
-    fig.text(0.315, legend_y, " mapped to a common construct", color=INK,
-             fontsize=8.3, ha="left", va="center")
-    fig.text(0.62, legend_y, "X", color=ORANGE, fontsize=11, fontweight="bold",
+    fig.text(0.30, legend_y, " mapped to a common construct", color=INK,
+             fontsize=12, fontweight="bold", ha="left", va="center")
+    fig.text(0.63, legend_y, "X", color=ORANGE, fontsize=14, fontweight="bold",
              ha="center", va="center", family="sans-serif")
-    fig.text(0.635, legend_y, " kept as distinct constructs", color=INK,
-             fontsize=8.3, ha="left", va="center")
+    fig.text(0.65, legend_y, " kept as distinct constructs", color=INK,
+             fontsize=12, fontweight="bold", ha="left", va="center")
 
     out_pdf = "outcome_mapping_figure.pdf"
     fig.savefig(out_pdf)
     fig.savefig("outcome_mapping_figure.png", dpi=300)
     print(f"Saved {out_pdf}")
-
-    # Emit the reference list as a companion text file for the figure legend.
-    with open("outcome_mapping_figure_references.txt", "w") as f:
-        f.write("References for figure superscripts (for figure legend / methods text):\n\n")
-        f.write("\n".join(REFERENCES))
-    print("Saved outcome_mapping_figure_references.txt")
 
 
 if __name__ == "__main__":

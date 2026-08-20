@@ -1,8 +1,0 @@
-References for figure superscripts (for figure legend / methods text):
-
-1,2. Zinman B, et al. Empagliflozin, Cardiovascular Outcomes, and Mortality in Type 2 Diabetes (EMPA-REG OUTCOME). N Engl J Med 2015. pubmed.ncbi.nlm.nih.gov/26378978  |  Cardiovascular Inflammation Reduction Trial (CIRT). ClinicalTrials.gov NCT01594333.
-3,4. ACURATE neo2 IDE trial. ClinicalTrials.gov NCT03735667.  |  Frailty in Elderly Patients Receiving Cardiac Interventional Procedures. ClinicalTrials.gov NCT02386124.
-5,6. Impact of a digital application on HbA1c levels in people with diabetes: a randomized controlled trial. PMC12257309.  |  Comparison of NN1250 With Insulin Glargine in Type 1 Diabetes. ClinicalTrials.gov NCT01079234.
-7,8. Determining the optimal fasting glucose target for patients with type 2 diabetes (FPG GOAL trial). PubMed 30938035.  |  Improvements to postprandial glucose control in subjects with type 2 diabetes: a randomized placebo-controlled trial of a probiotic formulation. PubMed 32675291.
-9,10. Schmid P, et al. Pembrolizumab for Early Triple-Negative Breast Cancer (KEYNOTE-522). N Engl J Med 2020. doi:10.1056/NEJMoa1910549  |  Eggermont AMM, et al. Adjuvant Pembrolizumab versus Placebo in Resected Stage III Melanoma. N Engl J Med 2018. doi:10.1056/NEJMoa1802357
-11,12. Phase 1 Study of SGI-110 in Patients With Acute Myeloid Leukemia. ClinicalTrials.gov NCT02293993.  |  Gandhi L, et al. Pembrolizumab plus Chemotherapy in Metastatic Non-Small-Cell Lung Cancer (KEYNOTE-189). N Engl J Med 2018. doi:10.1056/NEJMoa1801005
