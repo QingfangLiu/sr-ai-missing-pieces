@@ -1,4 +1,6 @@
 .DS_Store
+.venv/
+__pycache__/
 
 # Downloaded third-party reference PDFs — not for publishing in this repo
 papers/

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="849.6pt" height="378pt" viewBox="0 0 849.6 378" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-06T11:30:19.063045</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 378 
+L 849.6 378 
+L 849.6 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 152.28 143.64 
+L 351 143.64 
+Q 356.4 143.64 356.4 138.24 
+L 356.4 92.16 
+Q 356.4 86.76 351 86.76 
+L 152.28 86.76 
+Q 146.88 86.76 146.88 92.16 
+L 146.88 138.24 
+Q 146.88 143.64 152.28 143.64 
+z
+" clip-path="url(#p78dfb341fe)" style="fill: #dcebf7"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 152.28 212.76 
+L 351 212.76 
+Q 356.4 212.76 356.4 207.36 
+L 356.4 161.28 
+Q 356.4 155.88 351 155.88 
+L 152.28 155.88 
+Q 146.88 155.88 146.88 161.28 
+L 146.88 207.36 
+Q 146.88 212.76 152.28 212.76 
+z
+" clip-path="url(#p78dfb341fe)" style="fill: #fcefd8; stroke: #b87e17; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 383.4 143.64 
+L 582.12 143.64 
+Q 587.52 143.64 587.52 138.24 
+L 587.52 92.16 
+Q 587.52 86.76 582.12 86.76 
+L 383.4 86.76 
+Q 378 86.76 378 92.16 
+L 378 138.24 
+Q 378 143.64 383.4 143.64 
+z
+" clip-path="url(#p78dfb341fe)" style="fill: #dcebf7"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 383.4 212.76 
+L 582.12 212.76 
+Q 587.52 212.76 587.52 207.36 
+L 587.52 161.28 
+Q 587.52 155.88 582.12 155.88 
+L 383.4 155.88 
+Q 378 155.88 378 161.28 
+L 378 207.36 
+Q 378 212.76 383.4 212.76 
+z
+" clip-path="url(#p78dfb341fe)" style="fill: #fcefd8; stroke: #b87e17; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 614.52 143.64 
+L 813.24 143.64 
+Q 818.64 143.64 818.64 138.24 
+L 818.64 92.16 
+Q 818.64 86.76 813.24 86.76 
+L 614.52 86.76 
+Q 609.12 86.76 609.12 92.16 
+L 609.12 138.24 
+Q 609.12 143.64 614.52 143.64 
+z
+" clip-path="url(#p78dfb341fe)" style="fill: #dcebf7"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 614.52 212.76 
+L 813.24 212.76 
+Q 818.64 212.76 818.64 207.36 
+L 818.64 161.28 
+Q 818.64 155.88 813.24 155.88 
+L 614.52 155.88 
+Q 609.12 155.88 609.12 161.28 
+L 609.12 207.36 
+Q 609.12 212.76 614.52 212.76 
+z
+" clip-path="url(#p78dfb341fe)" style="fill: #fcefd8; stroke: #b87e17; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 146.88 38.16 
+L 587.52 38.16 
+" clip-path="url(#p78dfb341fe)" style="fill: none; stroke: #d9d9d9; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 609.12 38.16 
+L 818.64 38.16 
+" clip-path="url(#p78dfb341fe)" style="fill: none; stroke: #d9d9d9; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 146.88 303.84 
+L 356.4 303.84 
+" clip-path="url(#p78dfb341fe)" style="fill: none; stroke: #d9d9d9; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 378 303.84 
+L 587.52 303.84 
+" clip-path="url(#p78dfb341fe)" style="fill: none; stroke: #d9d9d9; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 609.12 303.84 
+L 818.64 303.84 
+" clip-path="url(#p78dfb341fe)" style="fill: none; stroke: #d9d9d9; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 598.32 362.16 
+L 598.32 43.92 
+" clip-path="url(#p78dfb341fe)" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #d9d9d9"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 13px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b6b6b" x="367.2" y="26.972578" transform="rotate(-0 367.2 26.972578)">Within the SR workflow</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 13px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6b6b6b" x="713.88" y="25.759922" transform="rotate(-0 713.88 25.759922)">Assessment of the output</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #2b2b2b" x="21.6" y="120.128437" transform="rotate(-0 21.6 120.128437)">Human role</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(21.6 181.365234)">Without this</text>
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(21.6 197.131641)">involvement</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #2b2b2b" x="21.6" y="262.829063" transform="rotate(-0 21.6 262.829063)">Example</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #2b2b2b" x="21.6" y="339.057187" transform="rotate(-0 21.6 339.057187)">Report explicitly</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #2b2b2b" x="251.64" y="65.808281" transform="rotate(-0 251.64 65.808281)">Required input</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(185.49875 112.330547)">Enables the workflow</text>
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(218.563906 126.702422)">to proceed</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(206.519531 180.065859)">Pipeline halts</text>
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(178.539219 195.832266)">until input is provided</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(175.903281 247.056094)">Reviewer sign-off before</text>
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(190.164688 262.737188)">screening decisions</text>
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(213.897969 279.980156)">are finalized</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 13px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(172.883359 331.484414)">Which stages require input;</text>
+    <text style="font-size: 13px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(181.909219 346.20082)">who provides it and how</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #2b2b2b" x="482.76" y="67.200469" transform="rotate(-0 482.76 67.200469)">Permitted intervention</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(423.226094 110.943672)">Optionally changes</text>
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(397.555781 126.620391)">a system decision or output</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(420.920469 180.065859)">Pipeline continues</text>
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(415.882656 197.131641)">without intervention</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(416.230469 247.1425)">Optional correction of</text>
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(410.779219 262.737188)">a screening decision or</text>
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(425.56125 279.894844)">an extracted value</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 13px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(406.891797 331.560586)">Where edits are accepted;</text>
+    <text style="font-size: 13px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(413.753359 346.124648)">whether they were used</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #2b2b2b" x="713.88" y="67.200469" transform="rotate(-0 713.88 67.200469)">Evaluation involvement</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(649.295156 112.330547)">Provides a reference</text>
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(622.443594 126.620391)">standard or expert judgement</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(630.666406 180.151172)">Output can be produced;</text>
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(616.625938 197.131641)">human assessment is absent</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(636.463281 247.060469)">Original review decisions</text>
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(635.676875 263.304844)">reused as a reference, or</text>
+    <text style="font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(622.566094 278.555)">an expert panel’s judgements</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 13px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(627.167969 331.563633)">Source of human judgements;</text>
+    <text style="font-size: 13px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #2b2b2b" transform="translate(634.028516 346.20082)">which output was evaluated</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p78dfb341fe">
+   <rect x="0" y="0" width="849.6" height="378"/>
+  </clipPath>
+ </defs>
+</svg>
