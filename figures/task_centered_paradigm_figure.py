@@ -2,9 +2,9 @@
 
 Run: python3 figures/task_centered_paradigm_figure.py
 Requires: matplotlib (python3 -m pip install matplotlib).
-PNG, PDF, and SVG are saved alongside this script, regardless of working directory.
+PNG and PDF are saved alongside this script, regardless of working directory.
 Edit TEXT, STAGES, COLORS, and the layout constants below to customize the figure.
-PDF embeds editable fonts; SVG preserves text as text.
+PDF embeds editable fonts.
 """
 
 from pathlib import Path
@@ -86,7 +86,7 @@ def build_figure():
     plt.rcParams.update({
         "font.family": "sans-serif",
         "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans"],
-        "pdf.fonttype": 42, "ps.fonttype": 42, "svg.fonttype": "none",
+        "pdf.fonttype": 42, "ps.fonttype": 42,
     })
     fig = plt.figure(figsize=(FIG_W, FIG_H), facecolor="white")
     ax = fig.add_axes([0, 0, 1, 1])
@@ -119,7 +119,7 @@ def build_figure():
 def main():
     fig = build_figure()
     output_dir = Path(__file__).resolve().parent
-    for extension in ("png", "pdf", "svg"):
+    for extension in ("png", "pdf"):
         output = output_dir / f"{OUTPUT_STEM}.{extension}"
         fig.savefig(output, dpi=DPI, facecolor="white")
         print(f"Saved {output}")

@@ -1,7 +1,7 @@
 """Human roles in AI-assisted systematic reviews.
 
 Run: .venv/bin/python figures/human_roles_figure.py
-Exports a 300-dpi PNG and editable PDF/SVG beside this source.
+Exports a 300-dpi PNG and editable PDF beside this source.
 """
 from pathlib import Path
 import matplotlib
@@ -34,7 +34,7 @@ COLUMNS = [
 def build_figure():
     plt.rcParams.update({'font.family': 'sans-serif',
         'font.sans-serif': ['Arial', 'Helvetica', 'DejaVu Sans'],
-        'pdf.fonttype': 42, 'ps.fonttype': 42, 'svg.fonttype': 'none'})
+        'pdf.fonttype': 42, 'ps.fonttype': 42})
     fig = plt.figure(figsize=(FIG_W, FIG_H), facecolor='white')
     ax = fig.add_axes([0, 0, 1, 1])
     ax.set(xlim=(0, FIG_W), ylim=(0, FIG_H), aspect='equal')
@@ -74,7 +74,7 @@ def build_figure():
 
 def main():
     fig=build_figure()
-    for ext in ('png','pdf','svg'):
+    for ext in ('png','pdf'):
         output=Path(__file__).resolve().with_suffix('.'+ext)
         fig.savefig(output,dpi=300,facecolor='white')
         print(output)

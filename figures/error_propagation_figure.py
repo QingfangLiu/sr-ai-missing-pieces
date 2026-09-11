@@ -1,7 +1,7 @@
 """Conceptual error propagation in systematic reviews (SRs).
 
 Run: .venv/bin/python figures/error_propagation_figure.py
-Requires matplotlib. Exports a 300-dpi PNG and editable PDF/SVG beside this file.
+Requires matplotlib. Exports a 300-dpi PNG and editable PDF beside this file.
 Edit PATHWAYS and COLORS to customize the examples and styling.
 """
 from pathlib import Path
@@ -35,7 +35,7 @@ def build_figure():
     plt.rcParams.update({"font.family": "sans-serif",
                          "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans"],
                          "pdf.fonttype": 42, "ps.fonttype": 42,
-                         "svg.fonttype": "none"})
+                         })
     fig = plt.figure(figsize=(FIG_W, FIG_H), facecolor="white")
     ax = fig.add_axes([0, 0, 1, 1])
     ax.set(xlim=(0, 9.1), ylim=(Y_MIN, Y_MIN + FIG_H), aspect="auto")
@@ -111,7 +111,7 @@ def build_figure():
 
 def main():
     fig = build_figure()
-    for extension in ("png", "pdf", "svg"):
+    for extension in ("png", "pdf"):
         output = Path(__file__).resolve().with_suffix("."+extension)
         fig.savefig(output, dpi=DPI, facecolor="white")
         print(f"Saved {output}")
