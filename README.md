@@ -6,6 +6,15 @@ Companion materials for the perspective paper:
 
 ## Contents
 
+### Review-level PICO-S definition figure
+
+[`figures/pico_definition_figure.py`](figures/pico_definition_figure.py) illustrates
+intervention grouping and co-intervention rules and shows how review-level PICO-S
+definitions determine eligibility criteria. It matches the existing figures'
+typography and blue/amber palette. Regenerate the editable PDF
+and 300-dpi PNG with `.venv/bin/python figures/pico_definition_figure.py`.
+Suggested caption: [`figures/pico_definition_caption.md`](figures/pico_definition_caption.md).
+
 - [`figures/`](figures/) — figure source (matplotlib) and generated PDF/PNG outputs for the manuscript.
 
 ### SR agent landscape figure
