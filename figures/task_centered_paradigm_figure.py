@@ -27,22 +27,22 @@ STAGES = [
         "title": "Literature searching",
         "input": "Review question",
         "action": "LLM generates\nBoolean queries",
-        "output": "Retrieved records",
-        "evaluation": "Recall, precision",
+        "output": "Retrieved study records",
+        "evaluation": "Recall, precision, etc.",
     },
     {
         "title": "Study screening",
-        "input": "Records +\neligibility criteria",
+        "input": "Study records +\neligibility criteria",
         "action": "LLM classifies\ninclude / exclude",
         "output": "Inclusion/exclusion\ndecisions",
-        "evaluation": "Recall, specificity,\nagreement",
+        "evaluation": "Recall, specificity,\nagreement, etc.",
     },
     {
         "title": "Data extraction",
-        "input": "Full texts +\nextraction template",
+        "input": "Full texts +\nextraction forms",
         "action": "LLM extracts\nstructured fields",
         "output": "Study-level data",
-        "evaluation": "Field-level accuracy\nor agreement",
+        "evaluation": "Field-level or study-level\naccuracy or agreement, etc.",
     },
 ]
 
