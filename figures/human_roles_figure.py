@@ -9,25 +9,24 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
 
-COLORS = dict(ink='#2B2B2B', gray='#6B6B6B', blue='#DCEBF7',
-              amber='#FCEFD8', amber_edge='#B87E17', divider='#D9D9D9')
-FIG_W, FIG_H = 11.8, 5.25
+COLORS = dict(ink='#20262B',
+              role_fill='#E7EDF1', role_edge='#526D7A',
+              absent_fill='#F1F2F3', absent_edge='#747C82',
+              divider='#C9CED2')
+FIG_W, FIG_H = 11.8, 4.4
 COLUMNS = [
     dict(title='Required input', group='Within the SR workflow',
          role='Enables the workflow\nto proceed',
          absent='Pipeline halts\nuntil input is provided',
-         example='Reviewer sign-off before\nscreening decisions\nare finalized',
-         report='Which stages require input;\nwho provides it and how'),
-    dict(title='Permitted intervention', group='',
+         example='Reviewer sign-off before\nscreening decisions\nare finalized'),
+    dict(title='Optional input', group='',
          role='Optionally changes\na system decision or output',
-         absent='Pipeline continues\nwithout intervention',
-         example='Optional correction of\na screening decision or\nan extracted value',
-         report='Where edits are accepted;\nwhether they were used'),
-    dict(title='Evaluation involvement', group='Assessment of the output',
-         role='Provides a reference\nstandard or expert judgement',
+         absent='Pipeline continues\nwithout modification',
+         example='Optional correction of\na screening decision or\nan extracted value'),
+    dict(title='Output evaluation', group='Outside of the SR workflow',
+         role='Provides a reference\nstandard from experts',
          absent='Output can be produced;\nhuman assessment is absent',
-         example='Original review decisions\nreused as a reference, or\nan expert panel’s judgements',
-         report='Source of human judgements;\nwhich output was evaluated'),
+         example='Original review decisions\nreused as a reference, or\nan expert panel’s judgements'),
 ]
 
 
@@ -44,31 +43,29 @@ def build_figure():
                        color=color or COLORS['ink'], ha=ha, va='center', linespacing=1.2)
     start, width, gap = 2.04, 2.91, .30
     centers = [start + i*(width+gap) + width/2 for i in range(3)]
-    text((centers[0]+centers[1])/2, 4.94, COLUMNS[0]['group'], 13, color=COLORS['gray'])
-    text(centers[2], 4.94, COLUMNS[2]['group'], 13, color=COLORS['gray'])
-    ax.plot([start, start+2*width+gap], [4.72,4.72], color=COLORS['divider'], lw=1)
-    ax.plot([start+2*(width+gap),start+2*(width+gap)+width], [4.72,4.72], color=COLORS['divider'], lw=1)
-    rows = [('Human role',3.65), ('Without this\ninvolvement',2.69),
-            ('Example',1.65), ('Report explicitly',.59)]
+    text((centers[0]+centers[1])/2, 4.09, COLUMNS[0]['group'], 14.5)
+    text(centers[2], 4.09, COLUMNS[2]['group'], 14.5)
+    ax.plot([start, start+2*width+gap], [3.87,3.87], color=COLORS['divider'], lw=1.2)
+    ax.plot([start+2*(width+gap),start+2*(width+gap)+width], [3.87,3.87], color=COLORS['divider'], lw=1.2)
+    rows = [('Human role',2.80), ('Without this\ninvolvement',1.84),
+            ('Example',.70)]
     for title,y in rows:
-        text(.30,y,title,14,'bold',ha='left')
+        text(.30,y,title,15.5,'bold',ha='left')
     for i,col in enumerate(COLUMNS):
         x = start+i*(width+gap)
         center=centers[i]
-        text(center,4.39,col['title'],15,'bold')
+        text(center,3.54,col['title'],17,'bold')
         for key,y,h,face,edge,bold in [
-            ('role',3.65,.79,COLORS['blue'],'none',False),
-            ('absent',2.69,.79,COLORS['amber'],COLORS['amber_edge'],True)]:
+            ('role',2.80,.79,COLORS['role_fill'],COLORS['role_edge'],False),
+            ('absent',1.84,.79,COLORS['absent_fill'],COLORS['absent_edge'],False)]:
             ax.add_patch(FancyBboxPatch((x,y-h/2),width,h,
                 boxstyle='round,pad=0,rounding_size=0.075',
                 facecolor=face,edgecolor=edge,linewidth=1.2))
-            text(center,y,col[key],14,'bold' if bold else 'normal')
-        text(center,1.65,col['example'],14)
-        ax.plot([x,x+width],[1.03,1.03],color=COLORS['divider'],lw=.8)
-        text(center,.59,col['report'],13)
+            text(center,y,col[key],15.5,'bold' if bold else 'normal')
+        text(center,.70,col['example'],15)
     # Separate evaluation from the two operational roles without a heavy grid.
     boundary=start+2*(width+gap)-gap/2
-    ax.plot([boundary,boundary],[.22,4.64],color=COLORS['divider'],lw=1,ls=(0,(3,3)))
+    ax.plot([boundary,boundary],[.15,3.79],color=COLORS['divider'],lw=1.2,ls=(0,(3,3)))
     return fig
 
 

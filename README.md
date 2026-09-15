@@ -48,8 +48,8 @@ After setup, only the last command is needed. Outputs are always saved in
 ### Human roles figure
 
 [`figures/human_roles_figure.py`](figures/human_roles_figure.py) compares required
-input, permitted intervention, and evaluation involvement using the existing
-figures’ palette and typography. Edit `COLUMNS` to change wording. Regenerate the
+input, optional input, and output evaluation using a restrained slate
+palette. Edit `COLUMNS` to change wording. Regenerate the
 300-dpi PNG and editable PDF with:
 
 ```sh
