@@ -4,3 +4,6 @@ __pycache__/
 
 # Downloaded third-party reference PDFs — not for publishing in this repo
 papers/
+
+# Local writing drafts and exports
+/writing/
