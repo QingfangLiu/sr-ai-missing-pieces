@@ -20,11 +20,11 @@ Y_MIN = -0.15
 ERROR_ARROW_LENGTH = 0.20
 FONT_INCREASE = 5.5
 PATHWAYS = [
-    dict(y=2.20, title="Low-impact error example", edge="green",
+    dict(y=2.10, title="Low-impact error example", edge="green",
          boxes=["Commentary\narticle\nmistakenly\nincluded",
                 "No extractable\noutcome data",
                 "Little impact\non downstream\nsynthesis"]),
-    dict(y=.60, title="High-impact error example", edge="red",
+    dict(y=.70, title="High-impact error example", edge="red",
          boxes=["Study of an\nineligible\nintervention\nincluded",
                 "Outcome data\nextracted and\nretained in\nsynthesis",
                 "May bias pooled\nestimate /\nconclusions"]),
@@ -64,8 +64,8 @@ def build_figure():
         ax.plot([x0, x1], [y, y], color=COLORS["divider"], lw=1)
 
     # A: stagewise processing and human cross-stage checking.
-    text(.3, 7.25, "A  Error propagation through the systematic review pipeline", 15, "bold", ha="left")
-    text(.3, 3.12, "B  Downstream impact of different error types", 15, "bold", ha="left")
+    text(.3, 7.25, "A  Error propagation through the systematic review pipeline", 15, ha="left")
+    text(.3, 3.12, "B  Downstream impact of different error types", 15, ha="left")
     # Error columns share the screening, extraction, and synthesis centers
     # with both workflows above (4.38, 6.18, and 7.98).
     error_columns = [(3.57, 1.62), (5.37, 1.62), (7.17, 1.62)]
