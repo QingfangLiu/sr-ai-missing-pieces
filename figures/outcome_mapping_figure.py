@@ -30,13 +30,22 @@ COLORS = {
     "divider": "#D9D9D9",
 }
 PANEL_W = 6.7
-FIG_W, FIG_H, DPI = 11.8, 4.9, 300
-Y_MAX = 5.3
 CONTENT_LEFT, CONTENT_RIGHT = 0.22, 6.45
 CONTENT_WIDTH = CONTENT_RIGHT - CONTENT_LEFT
-SOURCE_YS = (3.73, 1.59)
-RESULT_YS = (2.92, 0.67)
 SOURCE_H, RESULT_H = 0.55, 0.62
+# Build both rows from the same spacing so all four examples stay aligned.
+BOTTOM_MARGIN = 0.25
+HEADING_TO_SOURCE, SOURCE_TO_RESULT = 0.45, 0.90
+BETWEEN_ROWS = 0.50
+ROW_PITCH = RESULT_H / 2 + SOURCE_TO_RESULT + HEADING_TO_SOURCE + BETWEEN_ROWS
+BOTTOM_RESULT_Y = BOTTOM_MARGIN + RESULT_H / 2
+RESULT_YS = (BOTTOM_RESULT_Y + ROW_PITCH, BOTTOM_RESULT_Y)
+SOURCE_YS = tuple(y + SOURCE_TO_RESULT for y in RESULT_YS)
+HEADING_YS = tuple(y + HEADING_TO_SOURCE for y in SOURCE_YS)
+ROW_DIVIDER_Y = HEADING_YS[1] + 0.30
+PANEL_TITLE_Y = HEADING_YS[0] + 0.41
+Y_MAX = PANEL_TITLE_Y + 0.30
+FIG_W, FIG_H, DPI = 11.8, round(Y_MAX * 0.925, 2), 300
 
 # Verified in CD008096.pdf, included-study tables and Analysis 1.6 (PDF p. 45).
 # Douzinas 2006 (p. 31), Park 1992 (p. 36), Norton 1996 (p. 35),
@@ -93,27 +102,28 @@ def build_figure():
 
     axes = []
     for i, (letter, title) in enumerate((
-            ("A", "Which measures represent\nthe same outcome?"),
-            ("B", "Which follow-up times belong\nin the same synthesis?"))):
+            ("A", "Which measures represent the same outcome?"),
+            ("B", "Which follow-up times belong in the same synthesis?"))):
         ax = fig.add_axes([i / 2, 0, 0.5, 1])
         ax.set(xlim=(0, PANEL_W), ylim=(0, Y_MAX))
         ax.axis("off")
-        text(ax, 0.22, 4.99, letter, size=16, weight="bold", ha="left")
-        text(ax, 0.60, 4.99, title, size=14, ha="left")
-        ax.plot([CONTENT_LEFT, CONTENT_RIGHT], [2.48, 2.48],
+        text(ax, 0.22, PANEL_TITLE_Y, letter, size=16, weight="bold", ha="left")
+        text(ax, 0.60, PANEL_TITLE_Y, title, size=14, ha="left")
+        ax.plot([CONTENT_LEFT, CONTENT_RIGHT], [ROW_DIVIDER_Y, ROW_DIVIDER_Y],
                 color=COLORS["divider"], lw=1)
         axes.append(ax)
 
     left, right = axes
-    left.plot([6.68, 6.68], [0.24, 5.20], color=COLORS["divider"], lw=1)
+    left.plot([6.68, 6.68], [BOTTOM_MARGIN, Y_MAX - 0.10],
+              color=COLORS["divider"], lw=1)
 
     # Both panels share two aligned examples: combine above, retain separate below.
     for ax, top, bottom in (
             (left, "Different wording, same outcome", "Similar wording, different outcomes"),
-            (right, "Pool across follow-up", "Separate by follow-up window")):
-        text(ax, CONTENT_LEFT, 4.37, top, size=12, weight="bold",
+            (right, "Pool across follow-up window", "Separate by follow-up window")):
+        text(ax, CONTENT_LEFT, HEADING_YS[0], top, size=12, weight="bold",
              color="indigo", ha="left")
-        text(ax, CONTENT_LEFT, 2.23, bottom, size=12, weight="bold",
+        text(ax, CONTENT_LEFT, HEADING_YS[1], bottom, size=12, weight="bold",
              color="terracotta", ha="left")
 
     # A, top: different measures map to the common pain construct.
@@ -136,8 +146,6 @@ def build_figure():
               RESULT_YS[1], "terracotta")
 
     # B, top: selected study durations enter a single mortality synthesis.
-    text(right, CONTENT_LEFT, 4.10, "Mortality: selected study follow-ups",
-         size=10, color="gray", ha="left")
     xs, width = sources(right, POOLED_FOLLOWUPS, SOURCE_YS[0], gap=0.12)
     box(right, center - 1.55, RESULT_YS[0], 3.10, "One pooled mortality estimate",
         height=RESULT_H, color="indigo")
@@ -146,9 +154,7 @@ def build_figure():
               RESULT_YS[0], "indigo")
 
     # B, bottom: two concrete durations are mapped into each follow-up window.
-    text(right, CONTENT_LEFT, 1.96, "All-cause mortality: selected follow-ups (months)",
-         size=10, color="gray", ha="left")
-    values = [str(month) for months, _ in FOLLOWUP_WINDOWS for month in months]
+    values = [f"{month}\nmonths" for months, _ in FOLLOWUP_WINDOWS for month in months]
     xs, width = sources(right, values, SOURCE_YS[1], gap=0.12)
     result_gap = 0.16
     result_width = (CONTENT_WIDTH - 2 * result_gap) / 3
